@@ -1,2 +1,2 @@
 # cdbw14-3
-cd2020 cdbw14-3 mini project
+web http://mde.tw/cdbw14-3/content/index.html
