@@ -137,9 +137,31 @@
 <p><span><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/k-hYLLa9-CI" width="560"></iframe></span></span></p>
 <h1>group4</h1>
 <h2>40723245</h2>
-<p><span><span>website</span></span></p>
-<p><span><span>github</span></span></p>
-<h2>40723238</h2>
+<p><span><span>website:<a href="https://github.com/s40723245/cd2020">https://github.com/s40723245/cd2020</a></span></span></p>
+<p><span><span>github:<a href="https://s40723245.github.io/cd2020/content/index.html">https://s40723245.github.io/cd2020/content/index.html</a></span></span></p>
+<p>1.在VirtualBox先勾2個IPv6，主機網路為NAT Network</p>
+<p>2.主機密碼:kmol2020，打開LXTermial，輸入cd /etc</p>
+<p><span style="color: #ff0000;">**sudo為使用特殊的權限執行程式，vi為編輯內容</span></p>
+<p>3.cd apt --&gt; cd apt.conf.d --&gt;sudo vi proxy.conf</p>
+<p>4.密碼為kmol2020，按i來編輯，輸入proxy設定內容如下</p>
+<p>Acquire::http::Proxy "http://[2001:288:6004:17::53]:3128";</p>
+<p>5.按ESC然後輸入:wq來儲存，sudo apt update來更新</p>
+<p><span style="color: #ff0000;">**ifconfig為查看網卡信息的說明</span></p>
+<p>6.ifconfig --&gt; sudo apt install net-tools，cd /etc/netplan</p>
+<p>7.sudo vi 00-install-config.yaml，編輯成如下內容</p>
+<p><span style="color: #ff0000;">**注意:間隔和縮排要一樣</span></p>
+<p>network:<br/>    ethernets:<br/>        enp0s3:<br/>           dhcp4: true<br/>           dhcp6: true<br/>           nameservers:<br/>               addresses:<br/>                  - 2001:b000:168::11  <br/>  version: 2</p>
+<p>8.輸入sudo netplan apply來更新，再輸入ping6 2001:288:6004:17::254來測試連線</p>
+<p>9.在VirtualBox新增整體系統的Ipv6阜號</p>
+<p>10.打ifconfig搜尋IPv6的ip</p>
+<p>11.進去cd2020pj1 --&gt; git config --global --add http.proxy [2001:288:6004:17::53]:3128</p>
+<p>12.git pull 更新一下內容，在tmp下sudo vi oauth_scrum.txt新增檔案</p>
+<p>13.sudo vi wsgi.py，將近端的host改為::，打pytohn3 wsgi.py</p>
+<p>14.網址為https://[::1]:18443/alogin，再開啟cd2020pj1.leo</p>
+<p>15.在Nav找allowExt，新增一個ttt檔，重開即可上傳ttt檔</p>
+<p>(內容參考s40723210)</p>
+<p><span><span>以下是我的操作影片:</span></span><span><span><a href="https://youtu.be/QB2dhX-bsLQ">https://youtu.be/QB2dhX-bsLQ</a></span></span></p>
+<p><span><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/QB2dhX-bsLQ" width="560"></iframe></span></span></p><h2>40723238</h2>
 <p><span><span>website</span></span></p>
 <p><span><span>github</span></span></p>
 <p><span><span><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/orbtlB0y-fU" width="560"></iframe></span></span></p>
